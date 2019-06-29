@@ -2,12 +2,31 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+
+    .uiux {
+        background: coral;
+    }
+
+    .photo {
+        background: rgb(180, 39, 39)
+    }
+
+    .bezcurve {
+        background: rgb(117,70,226);
+    }
+
+    .gapinc {
+        background: #477ad9;
+    }
+    
 }
 
 .item {
     position: relative;
     background: $main-color;
     overflow: hidden;
+
+
 
     &::after {
         content:'';
@@ -21,6 +40,8 @@
         height: 100%;
         transform: scale(2) translateX(-75%) translateY(-75%) rotate(-28deg);
         transition: transform 3s cubic-bezier(0.2, 1, 0.3, 1);
+
+
 
     }
 

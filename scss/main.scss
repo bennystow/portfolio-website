@@ -24,7 +24,6 @@ ul {
 }
 
 h2, h3, h4 {
-    text-transform: uppercase;
 }
 
 img {
@@ -317,6 +316,71 @@ img {
 }
 
 
+// contact page
+
+#contact {
+    &-a {
+        .text-fields {
+            display: grid;
+            grid-template-areas:
+            'name email'
+            'subject phone'
+            'message message';
+            grid-gap: 1.2rem;
+            margin-top: 2rem;
+            margin-bottom: 1.2rem;
+
+            // gridareas
+            .name-input {
+                grid-area: name;
+            }
+            .email-input {
+                grid-area: email;
+            }
+            .subject-input {
+                grid-area: subject;
+            }
+            .phone-input {
+                grid-area: phone;
+            }
+            .message-input {
+                grid-area: message;
+                height: 100px;                
+            }
+
+            .text-input {
+                padding: 0.5rem 1rem;
+            }
+        }
+        
+        button[type='submit']{
+            width: 50%;
+        }
+    }
+
+    &-b {
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 0.5rem;
+            text-align-last: center;
+
+            i {
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+
+    &-c {
+        h1 {
+            text-align: center;
+            font-size: 4rem;
+            
+        }
+    }
+}
+
+
 // footer 
 
 #main-footer {
@@ -348,5 +412,5 @@ img {
 }
 
 
-
-
+// import  media queries
+@import 'media';
